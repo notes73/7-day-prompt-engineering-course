@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project 4: Real-Time Content Summarizer</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    /* Inline styles for card layout */
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      color: #000;
+    }
+    .project-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .project-header h1 {
+      margin: 0;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container header-container">
+      <!-- Logo as a clickable element -->
+      <a href="../index.html" id="logo-link">
+        <img src="../assets/images/logo.png" alt="Course Logo" class="logo">
+      </a>
+      <nav id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../course.html">Course</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="day2.html">Day 2</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Main Content Section -->
+  <main>
+    <div class="container project-container">
+      <div class="project-header">
+        <h1>Project 4: Real-Time Content Summarizer</h1>
+        <p>
+          Build an intelligent tool that condenses lengthy texts into concise, informative summaries in real time.
+        </p>
+      </div>
+      
+      <!-- Project Overview Card -->
+      <div class="card">
+        <div class="section">
+          <h2>Project Overview</h2>
+          <p>
+            The Real-Time Content Summarizer project is designed to help users quickly grasp the main ideas from large volumes of text. This tool processes articles, reports, or any lengthy documents and produces succinct summaries, making it invaluable for research, news aggregation, or academic purposes.
+          </p>
+        </div>
+        
+        <div class="section">
+          <h2>Objectives</h2>
+          <ul>
+            <li>Apply prompt engineering techniques for effective text summarization.</li>
+            <li>Integrate with language model APIs to generate high-quality summaries.</li>
+            <li>Create an intuitive interface for users to input and view text summaries.</li>
+            <li>Deploy a live application to showcase your capabilities.</li>
+          </ul>
+        </div>
+        
+        <div class="section">
+          <h2>Key Features</h2>
+          <ul>
+            <li><strong>Efficient Summarization:</strong> Convert lengthy texts into concise summaries without losing essential information.</li>
+            <li><strong>Real-Time Processing:</strong> Provide instantaneous results for quick content digestion.</li>
+            <li><strong>User-Friendly Interface:</strong> Allow users to paste text or upload documents easily.</li>
+            <li><strong>Customization Options:</strong> Enable users to specify summary length or focus on key topics.</li>
+          </ul>
+        </div>
+        
+        <div class="section">
+          <h2>Technical Stack</h2>
+          <ul>
+            <li><strong>Backend:</strong> Python and a language model API (e.g., OpenAI) for text processing.</li>
+            <li><strong>Frontend:</strong> Streamlit or another web framework to build an interactive user interface.</li>
+            <li><strong>Deployment:</strong> Use Hugging Face Spaces or Streamlit Sharing for live hosting.</li>
+          </ul>
+        </div>
+        
+        <div class="section">
+          <h2>How It Works</h2>
+          <p>
+            Users input or upload a long piece of text. The application constructs a prompt that instructs the language model to generate a concise summary. The response is then displayed in a clear and accessible format, highlighting the main points of the original text.
+          </p>
+          <pre>
+Example:
+User Input: "Paste a lengthy article here..."
+Prompt: "Summarize the following text in 3-4 sentences, highlighting the key points."
+Response: "The article discusses the recent advancements in renewable energy technologies, emphasizing the rapid growth of solar and wind power. It also outlines the challenges facing further adoption, including regulatory and infrastructure hurdles."
+          </pre>
+        </div>
+        
+        <div class="section">
+          <h2>Hands-On Exercise</h2>
+          <p>
+            Start by developing a basic Streamlit app where users can input text. Integrate the OpenAI API to generate summaries and display the output in real time. Experiment with different prompt structures and summary lengths. Once satisfied with your application, deploy it and share the live URL.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-container">
+      <nav class="footer-nav">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../course.html">Course</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="day2.html">Day 2</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2025 7 Day Prompt Engineering Course. All rights reserved.</p>
+      <p>
+        Follow us on 
+        <a href="#">Twitter</a> | 
+        <a href="#">LinkedIn</a> | 
+        <a href="#">Facebook</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

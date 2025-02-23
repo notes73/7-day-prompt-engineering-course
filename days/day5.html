@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Day 5: Mastering Interview Techniques</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    /* Additional inline styles for card layout */
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      color: #000;
+    }
+    .project-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .project-header h1 {
+      margin: 0;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    ul.real-life {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container header-container">
+      <a href="../index.html" id="logo-link">
+        <img src="../assets/images/logo.png" alt="Course Logo" class="logo">
+      </a>
+      <nav id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../course.html">Course</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="day5.html">Day 5</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Main Content Section -->
+  <main>
+    <div class="container day5-container">
+      <div class="project-header">
+        <h1>Day 5: Mastering Interview Techniques</h1>
+        <p>
+          Prepare to excel in technical and behavioral interviews by mastering key concepts, practicing real-life questions, and articulating your experience with clarity.
+        </p>
+      </div>
+      
+      <!-- Card: Technical Questions -->
+      <div class="card">
+        <h2>Technical Questions</h2>
+        <p>
+          This section covers crucial technical topics and common interview questions that assess your prompt engineering expertise. Below are some key areas along with real-life interview questions:
+        </p>
+        
+        <div class="section">
+          <h3>Explain Chain-of-Thought (CoT)</h3>
+          <p>
+            <strong>Concept:</strong> CoT prompting guides the model to think step-by-step before producing the final answer. It is a way to structure complex reasoning.
+          </p>
+          <ul class="real-life">
+            <li><em>Interview Question:</em> "Can you explain chain-of-thought prompting and how it improves model outputs?"</li>
+            <li><em>Interview Question:</em> "Describe a scenario where you used CoT to troubleshoot a problem in your project."</li>
+          </ul>
+        </div>
+        
+        <div class="section">
+          <h3>Hallucination Prevention</h3>
+          <p>
+            <strong>Concept:</strong> Preventing hallucinations involves techniques that minimize the risk of generating inaccurate or fabricated information. This includes providing robust context and iterative refinement.
+          </p>
+          <ul class="real-life">
+            <li><em>Interview Question:</em> "What methods do you use to prevent hallucinations in language model outputs?"</li>
+            <li><em>Interview Question:</em> "How do you verify the accuracy of a generated response when working with LLMs?"</li>
+          </ul>
+        </div>
+        
+        <div class="section">
+          <h3>Iteration Process</h3>
+          <p>
+            <strong>Concept:</strong> Iteration in prompt engineering involves refining prompts based on output quality. By testing multiple versions and tweaking parameters like temperature and token limits, you can significantly improve the model's performance.
+          </p>
+          <ul class="real-life">
+            <li><em>Interview Question:</em> "Describe your process for iteratively refining a prompt. What metrics or feedback do you rely on?"</li>
+            <li><em>Interview Question:</em> "Give an example of a time when iterative adjustments improved your model's output."</li>
+          </ul>
+        </div>
+        
+        <div class="section">
+          <h3>Real-Life Technical Question Examples</h3>
+          <pre>
+Interviewer: "How would you design a prompt to ensure that the model provides a detailed, step-by-step explanation of a complex process?"
+Candidate: "I would first break the process into individual steps and then use chain-of-thought prompting to guide the model. For example, 'Explain the process of data normalization in machine learning. Step 1: Define data normalization. Step 2: Describe why it is important. Step 3: Provide an example.' This forces the model to outline each phase clearly."
+          </pre>
+        </div>
+      </div>
+      
+      <!-- Card: Behavioral Responses -->
+      <div class="card">
+        <h2>Behavioral Responses</h2>
+        <p>
+          Behavioral questions assess your soft skills and how you’ve handled real-world challenges. Using the Situation-Action-Result (SAR) format can help you clearly articulate your experiences.
+        </p>
+        
+        <div class="section">
+          <h3>Situation-Action-Result (SAR) Format</h3>
+          <p>
+            <strong>Situation:</strong> Describe the context or challenge. <br>
+            <strong>Action:</strong> Explain the steps you took to address it. <br>
+            <strong>Result:</strong> Share the outcome, highlighting measurable improvements.
+          </p>
+          <ul class="real-life">
+            <li><em>Interview Question:</em> "Tell me about a time when you improved the accuracy of a language model output through prompt refinement."</li>
+            <li><em>Interview Question:</em> "Describe a challenging project and how you used prompt engineering to overcome it."</li>
+          </ul>
+        </div>
+        
+        <div class="section">
+          <h3>Real-Life Behavioral Question Example</h3>
+          <pre>
+Interviewer: "Can you describe a situation where you had to iterate on a solution to improve its performance?"
+Candidate:
+"Situation: I was tasked with improving the accuracy of generated responses for a client’s AI-powered assistant.
+Action: I analyzed the initial outputs, identified areas where the prompts were ambiguous, and iteratively refined the prompt using chain-of-thought techniques. I adjusted the temperature and token limits, and added clearer instructions.
+Result: The final output improved by 45% in accuracy and received positive feedback from both the client and end users."
+          </pre>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+  
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-container">
+      <nav class="footer-nav">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../course.html">Course</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="day5.html">Day 5</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2025 7 Day Prompt Engineering Course. All rights reserved.</p>
+      <p>
+        Follow us on <a href="#">Twitter</a> | <a href="#">LinkedIn</a> | <a href="#">Facebook</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

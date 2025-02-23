@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project 3: Interactive Chatbot Assistant</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    /* Inline styles for card layout */
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      color: #000;
+    }
+    .project-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .project-header h1 {
+      margin: 0;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container header-container">
+      <!-- Logo as a clickable element -->
+      <a href="../index.html" id="logo-link">
+        <img src="../assets/images/logo.png" alt="Course Logo" class="logo">
+      </a>
+      <nav id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../course.html">Course</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="day2.html">Day 2</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Main Content Section -->
+  <main>
+    <div class="container project-container">
+      <div class="project-header">
+        <h1>Project 3: Interactive Chatbot Assistant</h1>
+        <p>
+          Develop a dynamic chatbot capable of simulating natural conversation and assisting users in real time.
+        </p>
+      </div>
+      
+      <!-- Project Overview Card -->
+      <div class="card">
+        <div class="section">
+          <h2>Project Overview</h2>
+          <p>
+            The Interactive Chatbot Assistant project challenges you to build a conversational agent that not only responds to user queries but also retains context over multiple exchanges. This project leverages prompt engineering techniques and API integrations to simulate a natural, human-like dialogue, making it ideal for customer support, virtual assistance, or interactive learning applications.
+          </p>
+        </div>
+        
+        <div class="section">
+          <h2>Objectives</h2>
+          <ul>
+            <li>Implement prompt engineering to craft engaging and context-aware responses.</li>
+            <li>Integrate with a language model API to dynamically generate chatbot replies.</li>
+            <li>Create a user-friendly interface that supports real-time interactions.</li>
+            <li>Enable context retention for multi-turn conversations.</li>
+          </ul>
+        </div>
+        
+        <div class="section">
+          <h2>Key Features</h2>
+          <ul>
+            <li><strong>Natural Dialogue:</strong> Engage users with fluid, human-like conversation.</li>
+            <li><strong>Dynamic Responses:</strong> Generate replies in real time based on the conversation context.</li>
+            <li><strong>Context Management:</strong> Retain and utilize conversation history to provide coherent interactions.</li>
+            <li><strong>Customizable Persona:</strong> Tailor the chatbot's personality and tone via system prompts.</li>
+          </ul>
+        </div>
+        
+        <div class="section">
+          <h2>Technical Stack</h2>
+          <ul>
+            <li><strong>Backend:</strong> Python with a language model API (e.g., OpenAI, Anthropic) to handle natural language processing.</li>
+            <li><strong>Frontend:</strong> Streamlit or a similar framework to create an interactive chat interface.</li>
+            <li><strong>Deployment:</strong> Host your chatbot on platforms like Hugging Face Spaces or Streamlit Sharing for easy access.</li>
+          </ul>
+        </div>
+        
+        <div class="section">
+          <h2>How It Works</h2>
+          <p>
+            The application starts with a system prompt that sets the chatbot's persona and role. When a user sends a message, the system constructs a dynamic prompt using the current conversation context and forwards it to the language model API. The model generates a response which is then displayed in the chat interface. The conversation history is stored and used to maintain context in subsequent interactions.
+          </p>
+          <pre>
+Example:
+System Prompt: "You are a friendly customer support assistant."
+User: "How do I reset my password?"
+API Prompt: "Based on the conversation so far, provide a clear set of instructions for password reset."
+Response: "To reset your password, please click on the 'Forgot Password' link on the login page and follow the instructions sent to your email."
+          </pre>
+        </div>
+        
+        <div class="section">
+          <h2>Hands-On Exercise</h2>
+          <p>
+            Begin by creating a basic chat interface using Streamlit. Integrate the language model API to process user inputs and return responses. Experiment with different system prompts and conversation flows to achieve a natural and engaging dialogue. Finally, implement context retention to handle multi-turn conversations and deploy your chatbot online.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-container">
+      <nav class="footer-nav">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../course.html">Course</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="day2.html">Day 2</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2025 7 Day Prompt Engineering Course. All rights reserved.</p>
+      <p>
+        Follow us on 
+        <a href="#">Twitter</a> | 
+        <a href="#">LinkedIn</a> | 
+        <a href="#">Facebook</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

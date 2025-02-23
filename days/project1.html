@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project 1: AI-Powered Job Interview Coach</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    /* Inline styles for card layout */
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      color: #000;
+    }
+    .project-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .project-header h1 {
+      margin: 0;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container header-container">
+      <!-- Logo as a clickable element -->
+      <a href="../index.html" id="logo-link">
+        <img src="../assets/images/logo.png" alt="Course Logo" class="logo">
+      </a>
+      <nav id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../course.html">Course</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="day2.html">Day 2</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <div class="container project-container">
+      <div class="project-header">
+        <h1>Project 1: AI-Powered Job Interview Coach</h1>
+        <p>
+          Build a dynamic tool that assists job seekers by generating tailored interview responses and coaching tips.
+        </p>
+      </div>
+      
+      <!-- Project Overview Card -->
+      <div class="card">
+        <div class="section">
+          <h2>Project Overview</h2>
+          <p>
+            In today’s competitive job market, interview preparation is key to success. The AI-Powered Job Interview Coach project is designed to help candidates prepare effectively for job interviews by providing customized responses, suggestions, and feedback based on the job description and common interview questions.
+          </p>
+        </div>
+        
+        <div class="section">
+          <h2>Objectives</h2>
+          <ul>
+            <li>Demonstrate prompt engineering techniques in a practical, real-world application.</li>
+            <li>Integrate APIs to generate context-aware interview responses.</li>
+            <li>Create a user-friendly interface for interacting with the AI.</li>
+            <li>Deploy a live application that can be shared with potential employers.</li>
+          </ul>
+        </div>
+        
+        <div class="section">
+          <h2>Key Features</h2>
+          <ul>
+            <li><strong>Customized Interview Responses:</strong> Generate tailored answers based on specific job roles and interview scenarios.</li>
+            <li><strong>Coaching Tips:</strong> Provide users with actionable advice to improve their interview performance.</li>
+            <li><strong>Real-Time Interaction:</strong> Allow users to input different questions and get instant responses.</li>
+            <li><strong>Easy Deployment:</strong> Designed to be quickly deployed on platforms such as Hugging Face Spaces or Streamlit Sharing.</li>
+          </ul>
+        </div>
+        
+        <div class="section">
+          <h2>Technical Stack</h2>
+          <ul>
+            <li><strong>Backend:</strong> Python, OpenAI API for language model integration.</li>
+            <li><strong>Frontend:</strong> Streamlit for rapid UI development and interactive components.</li>
+            <li><strong>Deployment:</strong> Hugging Face Spaces or Streamlit Sharing to host your application live.</li>
+          </ul>
+        </div>
+        
+        <div class="section">
+          <h2>How It Works</h2>
+          <p>
+            The application collects input from the user—such as job description and interview questions—then constructs a prompt using advanced techniques like few-shot or chain-of-thought prompting. The OpenAI API processes this prompt and returns customized responses. These outputs are then displayed to the user along with actionable feedback.
+          </p>
+          <pre>
+Example:
+User Input: "I'm applying for a software engineering role."
+Prompt: "Generate interview tips and ideal responses for a software engineering interview based on this job description..."
+Response: "Focus on your problem-solving skills, discuss past project experiences, and highlight proficiency in coding languages such as Python..."
+          </pre>
+        </div>
+        
+        <div class="section">
+          <h2>Deployment Strategy</h2>
+          <p>
+            After building and testing your application locally, deploy it using a hosting platform. Ensure that your code repository is well-organized, document your setup process, and share your live URL on your resume and professional profiles.
+          </p>
+        </div>
+        
+        <div class="section">
+          <h2>Hands-On Exercise</h2>
+          <p>
+            Start by setting up a basic Streamlit app that interacts with the OpenAI API. Implement core features such as input fields for job descriptions and interview questions. Iterate on your prompt structure, test the outputs, and fine-tune the responses until they meet the desired quality. Finally, deploy your app online and gather feedback.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-container">
+      <nav class="footer-nav">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../course.html">Course</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="day2.html">Day 2</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2025 7 Day Prompt Engineering Course. All rights reserved.</p>
+      <p>
+        Follow us on 
+        <a href="#">Twitter</a> | 
+        <a href="#">LinkedIn</a> | 
+        <a href="#">Facebook</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

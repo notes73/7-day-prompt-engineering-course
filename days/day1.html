@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Day 1: Master Core High-Impact Skills - Prompt Structuring: Few-Shot</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    /* Additional inline styles for card layout */
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      color: #000; /* Card content in dark text for contrast */
+    }
+    .card h2, .card h3 {
+      margin-top: 0;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container header-container">
+      <!-- Logo acts as a toggle on mobile devices -->
+      <a href="../index.html" id="logo-link">
+        <img src="../assets/images/logo.png" alt="Course Logo" class="logo">
+      </a>
+      <nav id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../course.html">Course</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="day1.html">Day 1</a></li>
+          <!-- Add links for additional days if needed -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Main Content Section -->
+  <main>
+    <div class="container day1-container">
+      <h1>Day 1: Master Core High-Impact Skills</h1>
+      <p>
+        Welcome to Day 1 of the 7 Day Prompt Engineering Course. Today, you will master the fundamental skills necessary for effective prompt engineering, with a special focus on <strong>Prompt Structuring: Few-Shot</strong> techniques.
+      </p>
+      
+      <!-- Card: Prompt Structuring: Few-Shot -->
+      <div class="card">
+        <h2>Prompt Structuring: Few-Shot</h2>
+        <p>
+          Few-shot prompting is a method where you provide a language model with a few examples of desired input-output pairs along with a new query. This technique helps guide the model toward generating the output in a consistent tone, format, and style.
+        </p>
+        
+        <h3>Why Use Few-Shot Prompting?</h3>
+        <ul>
+          <li><strong>Clarifies the Task:</strong> Examples make your instructions explicit, reducing ambiguity.</li>
+          <li><strong>Guides the Model:</strong> Helps the model understand the desired output format and style.</li>
+          <li><strong>Ensures Consistency:</strong> Provides a pattern for the model to follow, resulting in more consistent responses.</li>
+        </ul>
+        
+        <h3>How to Structure a Few-Shot Prompt</h3>
+        <p>
+          A well-crafted few-shot prompt generally includes:
+        </p>
+        <ol>
+          <li><strong>Instruction:</strong> Clearly state what you want the model to do (e.g., convert casual text to formal communication).</li>
+          <li><strong>Examples:</strong> Provide 2–3 pairs of sample inputs and desired outputs.</li>
+          <li><strong>Query:</strong> Add the new input you wish the model to process, leaving space for the output.</li>
+        </ol>
+        
+        <h3>Example of a Few-Shot Prompt</h3>
+        <pre>
+Example 1:
+Input: "Hey, can you send me the report?"
+Output: "Dear [Name], could you please forward the report at your earliest convenience?"
+
+Example 2:
+Input: "I'm not sure if I can make it to the meeting."
+Output: "Dear [Name], I regret to inform you that I may not be able to attend the upcoming meeting."
+
+Now, transform the following message:
+Input: "Got the files, thanks!"
+Output:
+        </pre>
+        <p>
+          This example shows how a few-shot prompt sets clear expectations for the model. Experiment by creating your own prompts for different tasks, such as translating tone or summarizing content.
+        </p>
+        
+        <h3>Best Practices</h3>
+        <ul>
+          <li><strong>Consistency:</strong> Keep your examples uniform in style and structure.</li>
+          <li><strong>Simplicity:</strong> Use clear, concise language to avoid confusing the model.</li>
+          <li><strong>Optimal Number:</strong> Typically 2-5 examples are ideal; too many may dilute the intended pattern.</li>
+        </ul>
+        
+        <h3>Hands-On Exercise</h3>
+        <p>
+          Create your own few-shot prompt. Choose a task—such as rephrasing informal messages into formal emails—and develop 2-3 examples. Test your prompt with a language model, observe the output, and refine it for better results.
+        </p>
+      </div>
+
+      <!-- Card: Prompt Structuring - Zero-Shot -->
+<div class="card">
+    <h2>Prompt Structuring: Zero-Shot</h2>
+    <p>
+      Zero-shot prompting involves giving a clear, direct instruction to the language model without providing any examples. It leverages the model’s pre-trained knowledge to interpret and execute the task, making it ideal for simple and well-defined tasks.
+    </p>
+    
+    <h3>Key Benefits</h3>
+    <ul>
+      <li><strong>Simplicity:</strong> No need for examples keeps the prompt clean and straightforward.</li>
+      <li><strong>Speed:</strong> Direct instructions lead to quick processing and rapid responses.</li>
+      <li><strong>Broad Applicability:</strong> Effective for common tasks where the model already has substantial training data.</li>
+    </ul>
+    
+    <h3>How to Structure a Zero-Shot Prompt</h3>
+    <ol>
+      <li><strong>Clear Instruction:</strong> Start with a direct command. For example, "Translate the following sentence to French."</li>
+      <li><strong>Concise Wording:</strong> Use simple, unambiguous language to avoid confusion.</li>
+      <li><strong>Optional Constraints:</strong> Specify any required output format if needed, such as "Answer in one sentence."</li>
+    </ol>
+    
+    <h3>Detailed Example</h3>
+    <pre>
+  Task: Translate to French
+  
+  Instruction: Translate the following sentence to French: "The weather is nice today."
+  
+  Expected Output: "Le temps est agréable aujourd'hui."
+    </pre>
+    <p>
+      In this example, the prompt is straightforward. The instruction provides all the necessary details for the model to perform the translation accurately without additional context.
+    </p>
+    
+    <h3>Best Practices for Zero-Shot Prompting</h3>
+    <ul>
+      <li><strong>Clarity is Key:</strong> Ensure your instruction is precise to avoid multiple interpretations.</li>
+      <li><strong>Keep It Focused:</strong> Stick to a single task to prevent the model from getting confused.</li>
+      <li><strong>Test and Iterate:</strong> Experiment with different phrasings and compare results for the best output.</li>
+      <li><strong>Document Variations:</strong> Keep track of your prompt variations and corresponding outputs to refine your approach.</li>
+    </ul>
+    
+    <h3>Common Pitfalls</h3>
+    <ul>
+      <li><strong>Overcomplication:</strong> Avoid adding unnecessary details that may dilute the core instruction.</li>
+      <li><strong>Ambiguity:</strong> Ensure there’s only one clear interpretation of your instruction.</li>
+      <li><strong>Lack of Direction:</strong> Even in zero-shot, a vague prompt can lead to off-target responses.</li>
+    </ul>
+    
+    <h3>Hands-On Exercise</h3>
+    <p>
+      Develop your own zero-shot prompt for a simple task—such as summarizing a headline or generating a creative tagline. Experiment with slight variations in your wording to see which version produces the most accurate and useful output.
+    </p>
+  </div>
+  
+
+  <!-- Card: Prompt Structuring - Chain-of-Thought (CoT) -->
+<div class="card">
+    <h2>Prompt Structuring: Chain-of-Thought (CoT)</h2>
+    <p>
+      Chain-of-Thought (CoT) prompting is a technique that encourages the model to outline its reasoning process step-by-step before delivering the final answer. Instead of simply providing an answer, the model explains its logical progression, which can improve the quality and transparency of complex problem-solving.
+    </p>
+    
+    <h3>Why Use Chain-of-Thought Prompting?</h3>
+    <ul>
+      <li><strong>Enhanced Reasoning:</strong> Breaks down complex tasks into logical, manageable steps.</li>
+      <li><strong>Improved Accuracy:</strong> Detailed reasoning often results in more precise and thorough answers.</li>
+      <li><strong>Transparency:</strong> Reveals the model’s internal thought process, making it easier to debug and refine outputs.</li>
+    </ul>
+    
+    <h3>How to Structure a Chain-of-Thought Prompt</h3>
+    <ol>
+      <li><strong>State the Problem Clearly:</strong> Begin with a clear, concise description of the task or question.</li>
+      <li><strong>Encourage Step-by-Step Reasoning:</strong> Instruct the model to break down the problem into individual steps (e.g., "Step 1", "Step 2", etc.).</li>
+      <li><strong>Ask for a Final Answer:</strong> Once the steps are laid out, request a concise final answer.</li>
+    </ol>
+    
+    <h3>Example of a Chain-of-Thought Prompt</h3>
+    <pre>
+  Solve the following problem step-by-step:
+  Problem: If a car travels at 60 mph, how far does it travel in 3 hours?
+  
+  Explanation:
+  Step 1: Identify the speed (60 mph) and the time (3 hours).
+  Step 2: Multiply speed by time: 60 mph * 3 hours.
+  Step 3: Final Answer: 180 miles.
+    </pre>
+    
+    <p>
+      In this example, the prompt guides the model to articulate each reasoning step, which not only clarifies the process but also ensures the final answer is logically derived.
+    </p>
+    
+    <h3>Best Practices</h3>
+    <ul>
+      <li><strong>Be Explicit:</strong> Clearly label each step to direct the model’s thought process.</li>
+      <li><strong>Keep It Focused:</strong> Avoid overly complex instructions that might confuse the reasoning flow.</li>
+      <li><strong>Iterate and Refine:</strong> Test your prompt, review the output, and adjust the instructions for clarity and effectiveness.</li>
+    </ul>
+    
+    <h3>Hands-On Exercise</h3>
+    <p>
+      Develop your own chain-of-thought prompt for a challenging task, such as planning an event schedule or solving a multi-part problem. Write detailed instructions for each step and ask the model for a final summary. Experiment with different phrasings to determine which structure produces the clearest reasoning process.
+    </p>
+  </div>
+  
+  <!-- Card: LLM Customization - Temperature -->
+<div class="card">
+    <h2>LLM Customization: Temperature</h2>
+    <p>
+      The <strong>temperature</strong> parameter in language models controls the randomness of the output. By adjusting the temperature, you can influence whether the model's responses are more deterministic or creative.
+    </p>
+    
+    <h3>Key Concepts</h3>
+    <ul>
+      <li><strong>Low Temperature (0 - 0.3):</strong> Produces more predictable and focused outputs.</li>
+      <li><strong>Moderate Temperature (0.4 - 0.7):</strong> Offers a balance between creativity and reliability.</li>
+      <li><strong>High Temperature (0.8 - 1.0+):</strong> Generates more varied, creative, and sometimes unexpected outputs.</li>
+    </ul>
+    
+    <h3>Example Scenario</h3>
+    <pre>
+  Task: Write a short story about a brave knight.
+  
+  Temperature 0.2 Output:
+  "Once upon a time, a brave knight defended his kingdom with unwavering valor."
+  
+  Temperature 0.8 Output:
+  "In a realm where legends stirred in every shadow, a fearless knight embarked on a quest filled with mystery, his journey as unpredictable as the winds of fate."
+    </pre>
+    
+    <h3>Best Practices</h3>
+    <ul>
+      <li><strong>Experiment:</strong> Test different temperature settings to see how they affect the output quality.</li>
+      <li><strong>Task-Specific Settings:</strong> Use lower temperatures for tasks needing accuracy and higher ones for creative or brainstorming tasks.</li>
+      <li><strong>Documentation:</strong> Keep notes on how changes in temperature impact responses to refine your prompt strategies.</li>
+    </ul>
+    
+    <h3>Hands-On Exercise</h3>
+    <p>
+      Adjust the temperature parameter in your language model's settings. Generate responses for a fixed prompt at various temperatures (e.g., 0.2, 0.5, 0.8) and analyze how the creativity and consistency of the outputs change.
+    </p>
+  </div>
+  
+  <!-- Card: LLM Customization - Token Limits -->
+<div class="card">
+    <h2>LLM Customization: Token Limits</h2>
+    <p>
+      Token limits define the maximum number of tokens that can be processed in a single API call. A token represents a piece of text (which can be as short as a single character or as long as one word), and the token limit encompasses both your input and the generated output.
+    </p>
+    
+    <h3>Key Concepts</h3>
+    <ul>
+      <li><strong>Token Definition:</strong> Tokens are the building blocks of text in language models, with each token representing words or subwords.</li>
+      <li><strong>Total Token Count:</strong> The combined count of tokens in your prompt and the model's response must stay within the token limit.</li>
+      <li><strong>Practical Impact:</strong> A longer prompt uses up more tokens, reducing the number available for the output, which can affect the detail and length of the response.</li>
+    </ul>
+    
+    <h3>Example Scenario</h3>
+    <pre>
+  Prompt: "Explain the theory of relativity in detail."
+  Token Limit: 2048 tokens
+  
+  If the prompt consumes 150 tokens, the model can generate up to 1898 tokens in response.
+    </pre>
+    
+    <h3>Best Practices</h3>
+    <ul>
+      <li><strong>Keep Prompts Concise:</strong> Include only the essential context to maximize available tokens for the output.</li>
+      <li><strong>Monitor Usage:</strong> Use tools or API feedback to track token consumption and adjust your prompt accordingly.</li>
+      <li><strong>Plan for Output Length:</strong> Ensure that your expected output fits within the remaining token budget.</li>
+    </ul>
+    
+    <h3>Hands-On Exercise</h3>
+    <p>
+      Experiment by creating a prompt of varying lengths. Note how increasing the prompt size reduces the space available for the model’s output. Adjust your approach to optimize for detailed yet concise responses.
+    </p>
+  </div>
+
+  <!-- Card: LLM Customization - System Prompts -->
+<div class="card">
+    <h2>LLM Customization: System Prompts</h2>
+    <p>
+      System prompts are special instructions provided at the beginning of a conversation to set the tone, behavior, and context for the language model's responses. They serve as the foundation for all subsequent interactions and ensure the model behaves consistently throughout the session.
+    </p>
+    
+    <h3>Key Concepts</h3>
+    <ul>
+      <li><strong>Definition:</strong> A system prompt is an initial instruction that defines the role, style, or context in which the model should operate.</li>
+      <li><strong>Purpose:</strong> It guides the model's responses by establishing rules or a specific persona before any user input is processed.</li>
+      <li><strong>Scope:</strong> Typically set at the start of a session, system prompts affect all subsequent interactions until changed or reset.</li>
+    </ul>
+    
+    <h3>Example Scenario</h3>
+    <pre>
+  System Prompt: "You are a highly knowledgeable assistant specializing in prompt engineering. Provide clear, concise, and accurate answers in a friendly tone."
+  User: "How does few-shot prompting work?"
+    </pre>
+    
+    <h3>Best Practices</h3>
+    <ul>
+      <li><strong>Clarity:</strong> Write system prompts that are unambiguous and straightforward to avoid misinterpretation.</li>
+      <li><strong>Conciseness:</strong> Keep the prompt succinct to prevent overwhelming the model with excessive details.</li>
+      <li><strong>Consistency:</strong> Use system prompts to establish a consistent style or tone across all interactions.</li>
+      <li><strong>Testing:</strong> Experiment with different phrasings to see how subtle changes affect the model's behavior.</li>
+    </ul>
+    
+    <h3>Hands-On Exercise</h3>
+    <p>
+      Develop your own system prompt for a specific task, such as customer support or technical assistance. Test the prompt by asking a series of questions and note how the model's responses align with the intended behavior.
+    </p>
+  </div>
+
+<!-- Card: Common Use Case - Summarization -->
+<div class="card">
+    <h2>Common Use Case: Summarization</h2>
+    <p>
+      Summarization involves condensing long pieces of text into a concise, digestible version while preserving the key points. This is particularly useful for processing articles, reports, or any lengthy documents.
+    </p>
+    <h3>How It Works</h3>
+    <ul>
+      <li><strong>Input:</strong> A long article or text passage.</li>
+      <li><strong>Instruction:</strong> Ask the model to generate a summary that highlights the main ideas.</li>
+      <li><strong>Output:</strong> A concise version of the original text capturing its essential information.</li>
+    </ul>
+    <h3>Example</h3>
+    <pre>
+  Input: "In today's tech news, several innovations in artificial intelligence have been unveiled, ranging from new algorithms to breakthrough hardware. These developments are expected to transform industries and improve efficiency across various sectors..."
+  Instruction: "Summarize the above article in three sentences."
+    </pre>
+    <h3>Best Practices</h3>
+    <ul>
+      <li>Specify the desired length and format of the summary.</li>
+      <li>Ensure the source text is clear and well-structured.</li>
+      <li>Experiment with different instructions to refine the quality of the summary.</li>
+    </ul>
+    <h3>Hands-On Exercise</h3>
+    <p>
+      Select a long article or report and craft a prompt that instructs the model to generate a succinct summary. Experiment with different phrasing until you achieve a summary that effectively captures the main points.
+    </p>
+  </div>
+  
+  <!-- Card: Common Use Case - Extraction -->
+  <div class="card">
+    <h2>Common Use Case: Extraction</h2>
+    <p>
+      Extraction involves pulling specific information or data points from a larger block of text. This technique is especially useful for obtaining structured information such as names, dates, locations, or key phrases from unstructured content.
+    </p>
+    <h3>How It Works</h3>
+    <ul>
+      <li><strong>Input:</strong> A block of text containing the information you need.</li>
+      <li><strong>Instruction:</strong> Ask the model to extract specific data points (e.g., "Extract the name, birthdate, and location from the text.").</li>
+      <li><strong>Output:</strong> A structured list or set of extracted data matching your query.</li>
+    </ul>
+    <h3>Example</h3>
+    <pre>
+  Input: "John Doe, born on January 1, 1990, is an accomplished engineer living in San Francisco."
+  Instruction: "Extract the person's name, birthdate, and location."
+    </pre>
+    <h3>Best Practices</h3>
+    <ul>
+      <li>Clearly specify which pieces of information to extract.</li>
+      <li>Use bullet points or numbering in the instruction for clarity.</li>
+      <li>Consider formatting the output in a structured format (like JSON or a list) if needed.</li>
+    </ul>
+    <h3>Hands-On Exercise</h3>
+    <p>
+      Choose a paragraph containing multiple data points and create a prompt that instructs the model to extract specific details. Compare the output with the original text and fine-tune your prompt for accuracy.
+    </p>
+  </div>
+  
+  <!-- Card: Common Use Case - Chatbot Creation -->
+  <div class="card">
+    <h2>Common Use Case: Chatbot Creation</h2>
+    <p>
+      Chatbot creation uses prompt engineering to design a conversational agent that interacts naturally with users. By setting up a proper system prompt and dialogue structure, you can create a chatbot capable of handling a variety of user queries in a friendly, conversational manner.
+    </p>
+    <h3>How It Works</h3>
+    <ul>
+      <li><strong>Input:</strong> User messages or queries that the chatbot will respond to.</li>
+      <li><strong>System Prompt:</strong> Define the chatbot's personality, tone, and domain of expertise.</li>
+      <li><strong>Dialogue Flow:</strong> Instruct the model to handle follow-up questions and maintain context in the conversation.</li>
+    </ul>
+    <h3>Example</h3>
+    <pre>
+  System Prompt: "You are a helpful and friendly assistant specializing in customer support."
+  User: "Can you help me set up my new account?"
+  Instruction: "Provide a step-by-step guide in a conversational tone."
+    </pre>
+    <h3>Best Practices</h3>
+    <ul>
+      <li>Define a clear role for the chatbot using system prompts.</li>
+      <li>Ensure that the conversation maintains context and flows naturally.</li>
+      <li>Iterate on the prompts to handle diverse user queries effectively.</li>
+    </ul>
+    <h3>Hands-On Exercise</h3>
+    <p>
+      Create a chatbot prompt for a common scenario, such as troubleshooting or account setup. Test the conversation flow and adjust your prompts to improve clarity, context retention, and user engagement.
+    </p>
+  </div>
+
+  <!-- Card: Fine-Tuning & APIs: OpenAI -->
+<div class="card">
+    <h2>Fine-Tuning & APIs: OpenAI</h2>
+    <p>
+      Fine-tuning is the process of customizing a pre-trained model on your own dataset to enhance its performance on specialized tasks. OpenAI's API provides robust tools that allow you to fine-tune models, deploy them in real-time applications, and optimize outputs for your specific use cases.
+    </p>
+    
+    <h3>Key Concepts</h3>
+    <ul>
+      <li><strong>Fine-Tuning:</strong> Adapting a general-purpose model to your domain by training it further with your curated dataset.</li>
+      <li><strong>API Integration:</strong> Leveraging OpenAI's API endpoints to interact with models, manage fine-tuning jobs, and deploy customized solutions.</li>
+      <li><strong>Customization:</strong> Adjusting the model’s behavior by altering prompt structures, hyperparameters, and training data.</li>
+    </ul>
+    
+    <h3>Example Scenario</h3>
+    <pre>
+  Dataset: Customer support chat logs.
+  Task: Fine-tune the model to generate context-aware and helpful responses for common customer inquiries.
+  API Workflow:
+    1. Prepare and clean your dataset.
+    2. Use OpenAI’s fine-tuning endpoint to train the model on your data.
+    3. Test the fine-tuned model with real queries.
+    </pre>
+    
+    <h3>Best Practices</h3>
+    <ul>
+      <li><strong>Curate Quality Data:</strong> Ensure your dataset is clean, relevant, and representative of the tasks you want to improve.</li>
+      <li><strong>Monitor Performance:</strong> Continuously evaluate the model’s outputs and iterate on your dataset and training parameters.</li>
+      <li><strong>Experiment:</strong> Test various configurations and prompt strategies to achieve optimal performance.</li>
+    </ul>
+    
+    <h3>Hands-On Exercise</h3>
+    <p>
+      Create a small dataset from your domain (e.g., FAQs or support queries) and use OpenAI's API to fine-tune a model. Observe how the model’s responses improve over the base model and document your parameter adjustments for future reference.
+    </p>
+  </div>
+
+  <!-- Card: Fine-Tuning & APIs: Anthropic, Mistral APIs, and LangChain -->
+<div class="card">
+    <h2>Fine-Tuning & APIs: Anthropic, Mistral APIs, and LangChain</h2>
+    <p>
+      Beyond OpenAI, several other platforms and frameworks offer robust APIs and tools to customize and deploy language models. Anthropic and Mistral provide alternative models with unique strengths, while LangChain serves as a framework to simplify the development of LLM-powered applications.
+    </p>
+    
+    <h3>Anthropic API</h3>
+    <p>
+      Anthropic focuses on safety, interpretability, and human-centric design. Their API is built to ensure that outputs are both reliable and ethically aligned, making it suitable for applications where controlled text generation is essential.
+    </p>
+    <ul>
+      <li><strong>Key Features:</strong> Emphasis on safe and transparent outputs.</li>
+      <li><strong>Common Use Cases:</strong> Content moderation, customer support, and any scenario requiring cautious text generation.</li>
+    </ul>
+    
+    <h3>Mistral APIs</h3>
+    <p>
+      Mistral offers high-performance language models optimized for efficiency and speed. Their APIs are designed for both fine-tuning and real-time inference, making them ideal for applications that demand rapid responses and scalability.
+    </p>
+    <ul>
+      <li><strong>Key Features:</strong> High efficiency, fast inference, and scalable solutions.</li>
+      <li><strong>Common Use Cases:</strong> Interactive applications, dynamic content generation, and real-time data processing.</li>
+    </ul>
+    
+    <h3>LangChain Framework</h3>
+    <p>
+      LangChain is a framework that streamlines the process of building applications using language models. It provides tools to manage prompt templates, chain multiple prompts together, and integrate LLM outputs with external data sources, simplifying complex workflows.
+    </p>
+    <ul>
+      <li><strong>Key Features:</strong> Simplified prompt management, chaining capabilities, and seamless integration with data sources.</li>
+      <li><strong>Common Use Cases:</strong> Developing chatbots, multi-step reasoning workflows, and automated data extraction pipelines.</li>
+    </ul>
+    
+    <h3>Best Practices & Hands-On Exercise</h3>
+    <p>
+      Explore these APIs and frameworks by building small projects. For instance, try creating a simple chatbot using Anthropic's API or develop a real-time summarization tool with Mistral. Experiment with LangChain to manage and chain prompts efficiently, and compare the different outputs to understand which platform best suits your application needs.
+    </p>
+  </div>
+  
+      
+      <!-- Additional card sections or content can be added here as needed -->
+      
+    </div>
+  </main>
+  
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-container">
+      <nav class="footer-nav">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../course.html">Course</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="day1.html">Day 1</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2025 7 Day Prompt Engineering Course. All rights reserved.</p>
+      <p>
+        Follow us on 
+        <a href="#">Twitter</a> | 
+        <a href="#">LinkedIn</a> | 
+        <a href="#">Facebook</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
